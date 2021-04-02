@@ -1,3 +1,17 @@
+/* CSS HEX color pallete:
+--space-cadet: #2c2549ff;
+--liberty: #6258a9ff;
+--cinnamon-satin: #b86173ff;
+--myrtle-green: #386865ff;
+*/
+
+/*font-family: 'Sacramento', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+*/
+
+
+
+/*
 * {
     box-sizing: border-box;
   }
@@ -22,4 +36,205 @@
   .error-message {
       color: red;
   }
-  
+*/
+ /* -- title: Name -- */
+.logo {
+  font-family: 'Sacramento', cursive;
+  font-size: 10vw;
+  font-weight: 100;
+  color: #000;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* -- header navigation -- 
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+*/
+/* -- General Style -- */
+
+body {
+  margin: 0;
+  background-color: #FFFFFF;
+  font-family: 'Open Sans Condensed', sans-serif; 
+  color: #000;
+  text-align: left;
+  padding: 5%;
+}
+
+header {
+  height: 140px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+main h1 h2 {
+  color: #000;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+main ul {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #000;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* -- Link style -- */
+a {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+}
+
+a:link    { color: #000;}
+a:visited { color: #b86173ff;}
+a:hover   { color: #386865ff;}
+a:active  { color: #6258a9ff;}
+
+footer {
+  text-align: right;
+  padding-right: 5%;
+}
+
+section {
+  padding: 0 10%;
+  padding-top: 30px;
+  margin: 10px 0;
+}
+
+.error-message {
+  color: #b86173ff;
+}
+
+/* -- Drinks -- */
+
+.drink-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --  Groups & Items  (Mobile First) -- */
+.wrapper {
+  width: 90%;
+}
+
+.group-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 5px;
+  padding: auto;
+}
+
+.item-double {
+  flex: 2;
+  margin: 5px;
+}
+
+/* Groups & Items  (Desktop) */
+
+@media all and (min-width: 800px) {
+
+  .wrapper {
+    width: 80%;
+    margin: auto;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+  .group-column {
+      flex-direction: column;
+    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+}
+
+/* Form Design */
+
+form label{
+  font-size: 20px;
+}
+form {
+  display:inline-block;
+  justify-content: center;
+
+}
+
+form input, 
+form textarea, form select {
+  width: 40%;
+  margin-bottom: 20px;
+  font-family: 'Open Sans Condensed';
+  font-size: 18px;
+}
+
+#submit {
+    background-color: #6258a9ff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Open Sans Condensed';
+    font-size: 20px;
+    border:none;
+}
+
+
+
+#submit:hover {
+    border: none;
+    background: #b86173ff;
+    box-shadow: 0px 0px 1px #777;
+}
+/* CSS HEX color pallete:
+--space-cadet: #2c2549ff;
+--liberty: #6258a9ff;
+--cinnamon-satin: #b86173ff;
+--myrtle-green: #386865ff;
+*/

@@ -10,8 +10,8 @@ function displayResults(responseJson) {
   // iterate through the items array
   for (let i = 0; i < responseJson.length; i++){
     $('#results-list').append(
-      `<li><h3><a href="${responseJson[i].volumeInfo.infoLink}">${responseJson[i].volumeInfo.title}</a></h3>
-      <img src="${responseJson[i].volumeInfo.imageLinks.smallThumbnail}">
+      `<li class="item"><h3><a href="${responseJson[i].volumeInfo.infoLink}">${responseJson[i].volumeInfo.title}</a></h3>
+      <img src="${responseJson[i].volumeInfo.imageLinks.smallThumbnail ? responseJson[i].volumeInfo.imageLinks.smallThumbnail : ''}">
       <p>${responseJson[i].volumeInfo.description ? responseJson[i].volumeInfo.description : ''}</p>
       </li>`
     );}
@@ -21,15 +21,17 @@ function displayResults(responseJson) {
 
 
 function displayDrinkResults(drinkResponseJson) {
-  if ($('#input-drink').val('Yes')){
+  if ($('#input-drink').val() === 'Yes'){
     var drinkResponseArray = JSON.parse(drinkResponseJson).drinks;
         $('#drink-result').empty();
         // iterate through the items array
         for (let i = 0; i < drinkResponseArray.length; i++){
           $('#drink-result').append(
-            `<h3>${drinkResponseArray[i].strDrink}</h3>
-            <img src="${drinkResponseArray[i].strDrinkThumb}">
+            `<div class="item">
+            <h1>${drinkResponseArray[i].strDrink}</h1>
+            <img class="drink-image" src="${drinkResponseArray[i].strDrinkThumb}">
             <div class="ingredientList">
+            <h2>Ingredients</h2>
             <p>${drinkResponseArray[i].strMeasure1 ? drinkResponseArray[i].strMeasure1 : ''} ${drinkResponseArray[i].strIngredient1 ? drinkResponseArray[i].strIngredient1 : ''}</p>
             <p>${drinkResponseArray[i].strMeasure2 ? drinkResponseArray[i].strMeasure2 : ''} ${drinkResponseArray[i].strIngredient2 ? drinkResponseArray[i].strIngredient2 : ''}</p>
             <p>${drinkResponseArray[i].strMeasure3 ? drinkResponseArray[i].strMeasure3 : ''} ${drinkResponseArray[i].strIngredient3 ? drinkResponseArray[i].strIngredient3 : ''}</p>
@@ -43,7 +45,9 @@ function displayDrinkResults(drinkResponseJson) {
             <p>${drinkResponseArray[i].strMeasure11 ? drinkResponseArray[i].strMeasure11 : ''} ${drinkResponseArray[i].strIngredient11 ? drinkResponseArray[i].strIngredient11 : ''}</p>
             <p>${drinkResponseArray[i].strMeasure12 ? drinkResponseArray[i].strMeasure12 : ''} ${drinkResponseArray[i].strIngredient12 ? drinkResponseArray[i].strIngredient12 : ''}</p>
             </div>
-            <p>${drinkResponseArray[i].strInstructions}</p>`
+            <h2>Instructions</h2>
+            <p>${drinkResponseArray[i].strInstructions}</p>
+            </div>`
           );}
         //display the results section  
         $('#results').removeClass('hidden');
@@ -62,7 +66,7 @@ function formatQueryParams(params) {
 function getBooks(query) {
   const params = {
     q: query + '+subject' , // this is the extra key for google api
-    maxResults: '5',
+    maxResults: '3',
     //key: apiKey,
   };
 
