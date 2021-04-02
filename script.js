@@ -83,7 +83,7 @@ function getBooks(query) {
     })
     .then(responseJson => displayResults(JSON.stringify(responseJson)))
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+      $('#js-error-message').text(`Please check your spelling or try another book. Something went wrong: ${err.message}.`);
     });
 }
 
