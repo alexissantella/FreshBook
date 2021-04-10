@@ -7,6 +7,7 @@ const drinkURL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 function displayResults(responseJson) {
   var responseJson = JSON.parse(responseJson).items;
   $('#results-list').empty();
+  $('#results').empty();
   // iterate through the items array
   for (let i = 0; i < responseJson.length; i++){
     $('#results-list').append(
@@ -53,6 +54,7 @@ function displayDrinkResults(drinkResponseJson) {
         $('#results').removeClass('hidden');
     }
   else {
+    $('#drink-result').empty();
     console.log('no drink');
   }
   }
@@ -64,6 +66,7 @@ function formatQueryParams(params) {
 }
 
 function getBooks(query) {
+  $('#results-list').empty();
   const params = {
     q: query + '+subject' , // this is the extra key for google api
     maxResults: '3',
@@ -73,7 +76,7 @@ function getBooks(query) {
   const queryString = formatQueryParams(params);
   const url = searchURL + queryString;
   console.log(url);
-
+  $('#js-error-message').empty();
   fetch(url)
     .then(response => {
       if (response.ok) {
@@ -100,7 +103,7 @@ function getDrink() {
         })
         .then(drinkResponseJson => displayDrinkResults(JSON.stringify(drinkResponseJson)))
         .catch(err => {
-            $('#js-error-message').text(`Something went wrong: ${err.message}`);
+            $('#error-message').text(`Something went wrong: ${err.message}`);
         });   
   }
 

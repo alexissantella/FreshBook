@@ -10,33 +10,6 @@ font-family: 'Open Sans Condensed', sans-serif;
 */
 
 
-
-/*
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  button, input[type="text"] {
-    padding: 5px;
-  }
-  
-  button:hover {
-    cursor: pointer;
-  }
-  
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .error-message {
-      color: red;
-  }
-*/
  /* -- title: Name -- */
 .logo {
   font-family: 'Sacramento', cursive;
@@ -49,29 +22,6 @@ font-family: 'Open Sans Condensed', sans-serif;
   justify-content: center;
 }
 
-/* -- header navigation -- 
-
-header nav {
-  display: flex;
-  justify-content: center;
-}
-
-header nav ul {
-  display: flex;
-  padding-left: 0;
-  list-style: none;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 20px 0 0;
-}
-
-header nav ul li:last-child a {
-  margin-right: 0;
-}
-*/
 /* -- General Style -- */
 
 body {
@@ -145,14 +95,10 @@ section {
   width: 90%;
 }
 
-.group-row {
-  display: flex;
-  flex-direction: row;
-}
 
 .group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .item {
@@ -168,7 +114,7 @@ section {
 
 /* Groups & Items  (Desktop) */
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 768px) {
 
   .wrapper {
     width: 80%;
@@ -179,8 +125,8 @@ section {
     flex-direction: row;
   }
 
-  .group-column {
-      flex-direction: column;
+  .group-row {
+      flex-direction: row;
     }
   header {
     display: flex;
