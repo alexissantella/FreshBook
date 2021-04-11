@@ -6,13 +6,13 @@ I wanted a book recommendation app that made reading more enjoyable. Most people
 
 ## Screenshots
 Homescreen:
-![Homescreen](screenshots/homescreen.png)
+![Homescreen](Screenshots/homescreen.png)
 
 Book Suggestions:
-![BookSuggestions](screenshots/BookSuggestion.png)
+![BookSuggestions](Screenshots/BookSuggestion.png)
 
 Drink Suggestion:
-![DrinkSuggestions](screenshots/DrinkSuggestion.png)
+![DrinkSuggestions](Screenshots/DrinkSuggestion.png)
 
 ##Features
 * Search a book
