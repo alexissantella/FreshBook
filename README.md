@@ -15,20 +15,20 @@ Book Suggestions:
 Drink Suggestion:
 ![DrinkSuggestion](Screenshots/DrinkSuggestion.png)
 
-##Features
+## Features (Summary of what app does)
 * Search a book
 * Option to choose a drink or no drink
 * See books similar 
 * See random drink suggestion if user chose yes
 
-##Technology
+## Technology
 * HTML
 * CSS
 * JavaScript
 * JQuery
 
-##Demo
-- [Live Demo](https://alexissantella.github.io/FreshBook/)
+## Demo
+- [Live Demo https://alexissantella.github.io/FreshBook/](https://alexissantella.github.io/FreshBook/)
 
 ## Author
 **Alexis Santella**
