@@ -9,10 +9,10 @@ Homescreen:
 ![Homescreen](Screenshots/homescreen.png)
 
 Book Suggestions:
-![BookSuggestions](Screenshots/BookSuggestion.png)
+![BookSuggestions](Screenshots/BookSuggestions.png)
 
 Drink Suggestion:
-![DrinkSuggestions](Screenshots/DrinkSuggestion.png)
+![DrinkSuggestion](Screenshots/DrinkSuggestion.png)
 
 ##Features
 * Search a book
@@ -32,5 +32,5 @@ Drink Suggestion:
 ## Author
 **Alexis Santella**
 
-##Acknowledgments
+## Acknowledgments
 **Christine Glass** - Mentor
